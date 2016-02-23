@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Bringing Web Development to the Physical World</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="A talk. :)">
+		<meta name="author" content="Sarah Etter">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -41,339 +41,492 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+					<h1>Bringing Web Development to the Physical World</h1>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>by <a href="http://sarahetter.com">Sarah Etter</a> / <a href="http://twitter.com/SarahEtter_">@SarahEtter_</a></small>
 					</p>
 				</section>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
+                <section>
+                    <h2>Arduino</h2>
+                    <ul>
+                        <li>Microcontroller</li>
+                        <li>Open Source</li>
+                        <li>C or C++</li>
+                        <li>Programmed with Arduino IDE</li>
+                        <li>Programs are called “Sketches”</li>
+                        <li>Serial Port - generally USB</li>
+                        <li>Pins</li>
+                        <li>Many different form factors</li>
+                    </ul>
+                    <aside class="notes">
+                        <p>microcontroller - small computer (SoC) on a single integrated circuit containing a processor core, memory, and programmable input/output peripherals</p>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+                        <p>Arduino is open source - both hardware AND software.</p>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
+                        <p>C++ or C - typically you will find examples in C++</p>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+                        <p>Pins - many different types of pins.
+                        Analog Reference pin - Reference voltage for the analog inputs,
+                        Ground,
+                        Power,
+                        Digital I/O,
+                        Analog I/O</p>
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
+                        <p>Pins can be analog or digital, so can accept input from many different types of sensors</p>
+                    </aside>
+                </section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+                <section>
+                    <h2>Form Factors</h2>
+                    <img src="img/arduinoUno.jpg">
+                    <img src="img/arduinoNano.jpg">
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+                    <aside class="notes">
+                        Reason for different form factors / boards:
+                        <ul>
+                            <li>Different operating voltage</li>
+                            <li>Different number of input/output pins</li>
+                            <li>Different SRAM size</li>
+                            <li>Different Flash memory size</li>
+                            <li>USB connector size (mini, micro, type B, etc)</li>
+                        </ul>
+                    </aside>
+                </section>
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+                <section>
+                    <h2>C++</h2>
+                    <ul>
+                        <li>Not a big deal!</li>
+                        <li>Strongly typed</li>
+                        <li>Arduino comes with methods to receive and give info to pins</li>
+                    </ul>
+                </section>
 
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
+                <section>
+                    <h2>Arduino IDE</h2>
+                    <img src="img/emptySketch.png">
+                    <aside class="notes">
+                        <ul>
+                            <li>Checkmark - compiles</li>
+                            <li>Arrow - uploads to device by USB</li>
+                        </ul>
+                    </aside>
+                </section>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+                <section>
+                    <h2>Sketch</h2>
+                    <pre><code class="hljs cpp">
+void setup() {
+// put your setup code here, to run once:
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
 }
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
 
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+void loop() {
+// put your main code here, to run repeatedly:
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+}
+                    </code></pre>
 
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
+                    <aside class="notes">
+                        <p>Setup - only happens once, on powering up the arduino, or pressing the “reset” button on the device</p>
+                        <p>Loop - Happens over and over forever. Takes the amount of time for your code to run, so if you want to do something a little slower, can add delay function.</p>
+                    </aside>
+                </section>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+                <section>
+                    <h2>How to Communicate with Pins</h2>
+                    <small>Note: 13 is the pin number</small>
+                    <pre><code class="hljs cpp">
+int pinNumber = 13;
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+// set pin mode
+pinMode(pinNumber, OUTPUT);
+// OR
+pinMode(pinNumber, INPUT);
 
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
+// Read or Write
+digitalWrite(pinNumber, HIGH);
+digitalRead(pinNumber);
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+//from 0 - 255
+analogWrite(pinNumber, 0);
+analogRead(pinNumber);
+                    </code></pre>
+                </section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
+                <section>
+                    <h2>Electrical Knowledge</h2>
+                    <ul>
+                        <li>Create Circuits</li>
+                        <li>Most boards are between 2.7 - 12V, so won't kill you under normal circumstances</li>
+                        <li>Good Resources
+                            <ul>
+                                <li><a href="https://learn.sparkfun.com/tutorials/what-is-a-circuit">https://learn.sparkfun.com/tutorials/what-is-a-circuit</a></li>
+                                <li><a href="https://123d.circuits.io">https://123d.circuits.io</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <aside class="notes">
+                        <p>Sparkfun link - Gives info on circuits & electrical theory</p>
+                        <p>circuits.io - You can create online models of circuits & sketches without doing the hardware, test first!</p>
+                    </aside>
+                </section>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
+                <section>
+                    <h2>Two Projects</h2>
+                    <ul>
+                        <li>Send real life information to the internet</li>
+                        <li>Use a webpage to control an Arduino unit</li>
+                    </ul>
+                </section>
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
+                <section>
+                    <h2>First Project - Temperature logger</h2>
+                    <img src="img/redboard.jpg" class="parts">
+                    <img src="img/sparkfun8266.jpg" class="parts">
+                    <img src="img/headerPins.jpg" class="parts" />
+                    <img src="img/tmpSensor.jpg" class="parts" />
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
+                    <aside class="notes">
+                        <p>Sending info from arduino to web.</p>
 
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
+                        <p>Using Sparkfun Redboard - very similar to Arduino UNO. Pretty standard “first board”</p>
+                        <p>ESP6266 Wifi Shield - shields are add on modules that plug into the arduino board and expand it’s capabilities.</p>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
+                        <p>Solder on some header pins, and it connects to the Redboard</p>
+
+                        <p>Temperature sensor</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Hundreds of Sensors!</h2>
+                    <ul style="float:left">
+                        <li>Temperature</li>
+                        <li>Humidity</li>
+                        <li>Light</li>
+                        <li>Accelerometer</li>
+                        <li>Force</li>
+                        <li>Flex</li>
+                        <li>Sound</li>
+                        <li>Motion</li>
+                    </ul>
+                    <ul class="float:right;">
+                        <li>Magnetometer</li>
+                        <li>Altitude</li>
+                        <li>Proximity</li>
+                        <li>Geiger Counter</li>
+                        <li>Carbon monoxide</li>
+                        <li>Heart Rate</li>
+                        <li>Alcohol</li>
+                    </ul>
+                    <aside class="notes">
+                        Read em all.
+
+                        Can use any one, or many of these, the possibilities are endless.
+                        OR just use them all, strap unit to your cat, and see what happens.
+
+                        I am using temperature because it’s simple.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Hardware Steps</h2>
+                    <ul>
+                        <li>Solder female header pins to WiFi Shield</li>
+                        <li>Attach Shield to Arduino Unit</li>
+                        <li>Create the circuit for the temperature sensor</li>
+                    </ul>
+                    <aside class="notes">
+                        <p>Solder notes - not going to give instructions on how to do this. It’s easy as long as  you actually follow instructions online. My first solder job was done with solder without rosin core, which means that the solder doesn’t flow or stick to anything. After an hour or so I got it to work, but it was awful looking and easy to break. Second time with right materials, the job was about 10 minutes, and the finished product will hold up over time. ANOTHER NOTE - make sure you put them in the right side up. :)</p>
+                    </aside>
+                </section>
+                <section>
+                    <img src="img/tempAttached.jpg">
+                    <aside class="notes">After solder & attached redboard to esp8266</aside>
+                </section>
+                <section>
+                    <img src="img/tempCircuit.jpg">
+                    <aside class="notes">Circuit. </aside>
+                </section>
+                <section>
+                    <h1>PUT IMAGE OF CIRCUIT IN ELECTRICAL TERMS HERE</h1>
+                </section>
+                <section>
+                    <h2>Arduino Software Steps</h2>
+                    <ul>
+                        <li>Create a new Sketch</li>
+                        <li>Include two libraries - SoftwareSerial <small>(<a href="https://github.com/arduino/Arduino/tree/master/hardware/arduino/avr/libraries/SoftwareSerial">https://github.com/arduino/Arduino/tree/master/hardware/arduino/avr/libraries/SoftwareSerial</a>)</small> & SparkFunESP8266WiFi <small>(<a href="https://github.com/sparkfun/SparkFun_ESP8266_AT_Arduino_Library">https://github.com/sparkfun/SparkFun_ESP8266_AT_Arduino_Library</a>)</small></li>
+                        <li>We will be using the TCP Client portion of the SparkFunESP8266Wifi Library</li>
+                    </ul>
+                    <aside class="notes">
+                        <p>SoftwareSerial library does :  SoftwareSerial library has been developed to allow serial communication on other digital pins of the Arduino</p>
+                        <p>SparkFunESP8266Wifi : creates definitions to allow our WiFi Shield to work with the Arduino, including naming the correct pins that it connects, and setting up a simpler interface for using the WiFi Shield. Without this library, we would have to manually output AT commands, which are Attention Commands, used by modems, and other communication hardware to create TCP/UDP connections. These are not very user friendly.</p>
+                    </aside>
+                </section>
+                <section>
+                    <h2>Web Software Steps</h2>
+                    <ul>
+                        <li>Create a database & a database table for storing values</li>
+                        <li>Add a field for temperature, and include timestamps</li>
+                        <li>Complete handling of a post request on your website & add posted values to database</li>
+                        <li>Create a separate page that will query results from the database and display them to a front end user.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>C++ Algorithm</h2>
+                    <ul>
+                        <li>In the setup() method:
+                            <ul>
+                                <li>Ensure we are able to talk to the WiFi Module (ESP8266) and that it is operational</li>
+                                <li>Connect the ESP8266 to the network via my home WiFi connection</li>
+                            </ul>
+                        </li>
+                        <li>In the loop() method:
+                            <ul>
+                                <li>Get the voltage from our temperature sensor, convert it to degrees Celcius</li>
+                                <li>Connect to the destination server (sarahetter.com)</li>
+                                <li>Send an HTTP POST request with the temperature</li>
+                                <li>Delay for about a minute</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Program Outline</h2>
+                    <pre><code class="hljs cpp">
+void setup() {
+initializeESP8266();
+connectESP8266();
+}
+void loop() {
+postTemperature();
+delay(60000);
+}
+void initializeESP8266() {}
+void connectESP8266() {}
+void postTemperature() {}
+float getTemperatureFromPin() {}
+                    </code></pre>
+                </section>
+                <section>
+                    <h2 style="text-transform: none">postTemperature()</h2>
+                    <pre><code class="hljs cpp">
+float degreesC;
+int connectRetVal;
+
+ESP8266Client client;
+
+degreesC = getTemperatureFromPin(A0);
+connectRetVal = client.connect(“sarahetter.com”, 80);
+
+if (connectRetVal <= 0) {
+    Serial.println(F("Failed to connect to server."));
+    return;
+}
+                    </code></pre>
+                    <aside class="notes">
+                        // Connecting to sarahetter.com on port 80
+                        // Returns: 1 on success, 2 on already connected,
+                        // negative on fail (-1=TIMEOUT, -3=FAIL).
+                    </aside>
+                </section>
+                <section>
+                    <h2 style="text-transform: none">postTemperature() continued</h2>
+                    <pre><code class="hljs cpp">
+String data = "temp1="+String(degreesC);
+client.println("POST /arduino/add.php HTTP/1.1");
+client.println("Host: sarahetter.com");
+client.println("Content-Type: application/x-www-form-urlencoded");
+client.print("Content-Length: ");
+client.println(data.length());
+client.println();
+client.print(data);
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>HTTP POST request</h2>
+                    <pre>
+POST /arduino/add.php HTTP/1.1
+Host: sarahetter.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 8
+
+temp1=22
+                    </pre>
+                </section>
+                <section>
+                    <h2>Compile & Flash</h2>
+                    <ul>
+                        <li>Arduino will start running immediately after uploading program.</li>
+                        <li>Check website after a few minutes, and your values will be displayed there.</li>
+                    </ul>
+
+                    <aside class="notes">
+                        http://sarahetter.com/arduino/
+
+                        <p>Talk about how easy this is. Different modules may make it harder, but because the library is there, the amount
+                        of work we have to do is very minimal. </p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Turn on a light remotely</h2>
+                    <img src="img/photonRedboard.jpg" class="parts">
+                    <img src="img/led.gif" class="parts">
+                    <aside class="notes">
+                        <p>Next Project!</p>
+
+                        <p>Using a different board - photon redboard. - cloud connected board that has wifi capabilities.</p>
+                        <p>Uses an API from particle.io. Cloud based IoT. Very little coding needed. Just need to post to their API & it does things for you!</p>
+
+                        <p>Proof of concept - since you can turn on an LED, you can turn on ANYTHING - a motor, a servo, a buzzer, a camera, or control a relay for larger electronics.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Hardware Setup</h2>
+                    <ul>
+                        <li>Plug in Photon Redboard to power</li>
+                        <li>Download the “Particle” app</li>
+                        <li>Follow instructions on screen</li>
+                        <li>Set up circuit with LED</li>
+                    </ul>
+                    <aside class="notes">
+                        Particle app connects device to the cloud, configures with your wifi connection
+                    </aside>
+                </section>
+
+                <section>
+                    <img src="img/particleapp.png">
+                </section>
+
+                <section>
+                    <img src="img/particleWithDevices.png">
+                </section>
+
+                <section>
+                    <img src="img/photonCircuit.jpg">
+                </section>
+
+                <section>
+                    <h1>CIRCUIT OF PHOTON ???</h1>
+                </section>
+
+                <section>
+                    <h2>Software Setup</h2>
+                    <ul>
+                        <li>Online IDE - https://build.particle.io/</li>
+                        <li>Compile & flash</li>
+                        <li>Map a function in the setup()
+                            <ul>
+                                <li>Spark.function("led", ledToggle);</li>
+                            </ul>
+                        </li>
+                        <li>Leave loop empty</li>
+                    </ul>
+                    <aside class="notes">Explain the mapping here</aside>
+                </section>
+
+                <section>
+                    <img src="img/particleioIDE.png">
+                    <aside class="notes">
+                        <p>Do all of the coding, compiling and flashing online!</p>
+                        <p>Click on checkmark on side to compile, and lightning bolt to flash to your board. Your board only needs to be powered on, and connected to the wireless network you configured.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <pre><code class="hljs cpp">
+void setup() {
+    pinMode(D3, OUTPUT);
+
+    Spark.function("led",ledToggle);
+
+    digitalWrite(D3, LOW);
+}
+                    </code></pre>
+                    <aside class="notes">
+                        <p>Set pinmode to output</p>
+                        <p>Map the function ledToggle to the api key led</p>
+                        <p>For good measure, make sure the LED is off</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <pre><code class="hljs cpp">
+int ledToggle(String command) {
+    if (command=="on") {
+        digitalWrite(led1,HIGH);
+        return 1;
+    }
+    else if (command=="off") {
+        digitalWrite(led1,LOW);
+        return 0;
+    }
+    else {
+        return -1;
+    }
+}
+                    </code></pre>
+
+                    <aside class="notes">
+                        The string that gets passed in (command) is the value of the input selected on our webform
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Website side</h2>
+                    <ul>
+                        <li>Create a form with the action:</li>
+                         <ul><li>https://api.particle.io/v1/devices/*** DEVICE ID***/<span class="highlight-red">led</span>?access_token=*** ACCESS TOKEN ***</li></ul>
+                        <li>Set the input names to “args”</li>
+                        <li>Set the input values to the strings to be sent to the API</li>
+                        <li><span class="highlight-red">led</span> is the name that we mapped to our ledToggle() function</li>
+                    </ul>
+                    <aside class="notes">
+                        <p>Device ID is available in the online IDE by clicking on the “Devices” Icon in the left sidebar</p>
+                        <p>Access Token is available in the online IDE by clicking on the “Settings” Icon in the left sidebar</p>
+
+                        <p>On form send, the app will iterate through the string comparisons, find the right one, and do the command (turning on/ off led) that we gave it.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <pre><code class="hljs html">
+<form action="https://api.particle.io/v1/devices/*** DEVICE ID***
+/led?access_token=*** ACCESS TOKEN ***" method="POST">
+    <input type="radio" name="args" value="on">Turn the LED on.
+    <br>
+    <input type="radio" name="args" value="off">Turn the LED off.
+    <br>
+    <br>
+    <input type="submit" value="Do it!">
+</form>
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Security!</h2>
+                    <ul>
+                        <li>Password protect any output page</li>
+                        <li>Sanitize Inputs</li>
+                        <li>Sanitize Inputs</li>
+                        <li>Sanitize Inputs</li>
+                        <li>Public/Private Key system in HTTP header</li>
+                    </ul>
+                    <aside class="notes">
+                        Lists of children webcams exist.
+                        <p>htpasswd, or in your software itself</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+
+
 
 			</div>
 

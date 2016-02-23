@@ -47,3 +47,10 @@ section.has-light-background {
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+.parts {
+  width: 25%;
+}
+.highlight-red {
+  color: #ff0000;
+}
