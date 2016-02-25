@@ -28,7 +28,7 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
-$linkColor: #2a76dd;
+$linkColor: #af1f8e;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
@@ -47,3 +47,11 @@ section.has-dark-background {
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+
+.parts {
+  width: 25%;
+}
+.highlight-red {
+  color: #ff0000;
+}
